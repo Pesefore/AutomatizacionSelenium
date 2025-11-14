@@ -46,6 +46,8 @@ public class JobTitleStep {
     public void ingresaDescription(String description){
         jobTitlePage.ingresaDescription(description);
     }
+    public void ingresaNote(String note){jobTitlePage.ingresaNote(note);
+    }
     public void seleccionaButtonSave(){
         jobTitlePage.seleccionaButtonSave();
     }

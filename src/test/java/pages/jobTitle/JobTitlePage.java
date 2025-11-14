@@ -32,6 +32,8 @@ public class JobTitlePage {
     private WebElement buttonSave;
     @FindBy(xpath = "//p[contains(@class,'oxd-text--toast-message')]")
     private WebElement messageExito;
+    @FindBy(xpath = "//label[normalize-space()='Note']/following::textarea[1]")
+    private WebElement txtNote;
 
 
 
@@ -67,6 +69,10 @@ public class JobTitlePage {
     public void ingresaDescription(String description){
         wait.until(ExpectedConditions.visibilityOf(txtTareaDescription));
         txtTareaDescription.sendKeys(description);
+    }
+    public void ingresaNote(String note){
+        wait.until(ExpectedConditions.visibilityOf(txtNote));
+        txtNote.sendKeys(note);
     }
     public void seleccionaButtonSave(){
         wait.until(ExpectedConditions.elementToBeClickable(buttonSave));

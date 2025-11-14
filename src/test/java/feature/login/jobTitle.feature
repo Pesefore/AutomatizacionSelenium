@@ -10,11 +10,12 @@ Feature: Create new Job Title
     And clickea el boton +Add
     And ingresa un "<Job Title>" en el input de Job Title
     And ingresa una "<Description>" en el input de Job Description
+    And ingresa una "<Note>" en el input de Note
     And clickea el boton Save
     Then el usuario habra creado exitosamente su Job Title
     Examples:
-    |Job Title|Description|
-    |Quality Enginner|Test Case|
+    |Job Title|Description|Note|
+    |Quality Enginner|Test Case|Lo que no me mata, me hace más fuerte|
 
 
 

@@ -37,6 +37,10 @@ public class JobTitleStepDefinitions {
     public void ingresaDescription(String description){
         jobTitleStep.ingresaDescription(description);
     }
+    @And("ingresa una {string} en el input de Note")
+    public void ingresaNote(String note){
+        jobTitleStep.ingresaNote(note);
+    }
     @And("clickea el boton Save")
     public void seleccionaButtonSave(){
         jobTitleStep.seleccionaButtonSave();
