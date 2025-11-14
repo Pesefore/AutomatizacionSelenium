@@ -13,7 +13,7 @@ public class JobTitleStep {
 
     public JobTitleStep(){
         this.Driver = Hooks.getDriver();
-        this.loginStep = new LoginStep();
+        this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
         this.jobTitlePage = new JobTitlePage(Driver);
     }
 

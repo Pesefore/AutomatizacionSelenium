@@ -1,6 +1,7 @@
 package pages.jobTitle;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,8 +55,17 @@ public class JobTitlePage {
     }
 
     public void seleccionaJobTitles() {
-        wait.until(ExpectedConditions.visibilityOf(buttonJobTitles));
-        buttonJobTitles.click();
+        try{
+            if(buttonJobTitles.isDisplayed()){
+                Thread.sleep(2000);//Vamos a dormir al sistema para que se observe que el usuario va a clikear el Job Titles
+                buttonJobTitles.click();
+            }
+        }catch (NoSuchElementException e){
+            throw new RuntimeException("No se encontró el elemento para interactuar.");
+        }
+        catch (InterruptedException e){
+            throw new RuntimeException("El tiempo de espera fue interrumpido.");
+        }
     }
 
     public void seleccionaButtonAdd(){
