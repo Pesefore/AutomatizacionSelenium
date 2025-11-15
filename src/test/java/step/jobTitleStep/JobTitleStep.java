@@ -54,6 +54,16 @@ public class JobTitleStep {
     public void titleExitoso(){
         jobTitlePage.titleExitoso();
     }
+    // -----------------------------------------------------------------------------------------------------------------
+    public void buttonDelete(String title){
+        jobTitlePage.buttonDelete(title);
+    }
+    public void buttonYesDelete(){
+        jobTitlePage.buttonYesDelete();
+    }
+    public void titleDelete(){
+        jobTitlePage.titleDelete();
+    }
 
 
 }

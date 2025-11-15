@@ -49,5 +49,19 @@ public class JobTitleStepDefinitions {
     public void titleExitoso(){
         jobTitleStep.titleExitoso();
     }
+    // -----------------------------------------------------------------------------------------------------------
+    @And("selecciona el boton eliminar del titulo de trabajo {string}")
+    public void buttonDelete(String title){
+        jobTitleStep.buttonDelete(title);
+    }
+    @And("clickea el boton Yes, Delete")
+    public void buttonYesDelete(){
+        jobTitleStep.buttonYesDelete();
+    }
+    @And("el usuario habra eliminado exitosamente su Job Title")
+    public void titleDelete(){
+        jobTitleStep.titleDelete();
+    }
+
 
 }

@@ -1,9 +1,6 @@
 package pages.jobTitle;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -35,6 +32,13 @@ public class JobTitlePage {
     private WebElement messageExito;
     @FindBy(xpath = "//label[normalize-space()='Note']/following::textarea[1]")
     private WebElement txtNote;
+    @FindBy(xpath = "//button[normalize-space()='Yes, Delete']")
+    private WebElement buttonYesDelete;
+    @FindBy(xpath = "//p[contains(@class,'oxd-text--toast-message')]")
+    private WebElement toastMessage;
+
+    //   //p[contains(@class,'oxd-text--toast-message')]
+    //   //div[contains(@class,'oxd-table-row')][.//div[normalize-space()='QA Lead']]//i[contains(@class,'bi-trash')]/ancestor::button    <- localizador dinámico del job title generado
 
 
 
@@ -93,7 +97,28 @@ public class JobTitlePage {
         assert messageExito.isDisplayed(): "El mensaje de exito no se mostro correctamente.";
 
     }
+    // -----------------------------------------------------------------------------------------------------------------
+    //Localizador dinámico (devuelve WebElement listo para usar)
+    public WebElement getDeleteButton(String title){
+        String xpath = "//div[contains(@class,'oxd-table-row')]" + "[.//div[normalize-space()='" + title + "']]" + "//i[contains(@class,'bi-trash')]/ancestor::button";
+        return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+    }
 
+    public void buttonDelete(String title){
+        try {
+            getDeleteButton(title).click();
+        } catch (TimeoutException e) {
+            throw new RuntimeException("No se encontró el botón Delete para el título: " + title);
+        }
+    }
+    public void buttonYesDelete(){
+        wait.until(ExpectedConditions.elementToBeClickable(buttonYesDelete));
+        buttonYesDelete.click();
+    }
 
+    public void titleDelete(){
+        wait.until(ExpectedConditions.visibilityOf(toastMessage));
+        assert toastMessage.isDisplayed() : "No se mostró el mensaje de eliminación.";
+    }
 
 }

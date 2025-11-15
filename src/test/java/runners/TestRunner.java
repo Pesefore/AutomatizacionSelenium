@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/feature/login",
         glue = {"stepDefinitions", "hooks"},
-        tags = "@JobTitle",
+        tags = "@CreateAndDeleteJobTitle",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         monochrome = true
 )
