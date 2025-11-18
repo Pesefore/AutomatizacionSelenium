@@ -1,7 +1,11 @@
-@CreateJobTitle
+@CreateNewJobTitle
 Feature: Create new Job Title
   Background:
-    Given el usuario inicia sesión en OrangeHMR
+    Given el usuario se encuentra en la página de OrangeHMR
+    When ingresa el username "Admin"
+    And ingresa el password "admin123"
+    And clickea el boton login
+    Then usuario ingresa exitosamente
 
   Scenario Outline:
     When el usuario da click al modulo de Admin

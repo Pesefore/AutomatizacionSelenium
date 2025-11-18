@@ -1,4 +1,4 @@
-package step.loginStep;
+package step.loginSharedStep;
 import org.openqa.selenium.WebDriver;
 import hooks.Hooks;
 import pages.login.LoginPage;

@@ -9,10 +9,6 @@ import step.jobTitleStep.JobTitleStep;
 public class JobTitleStepDefinitions {
     private JobTitleStep jobTitleStep = new JobTitleStep();
 
-    @Given("el usuario inicia sesión en OrangeHMR")
-    public void realizarLogin(){
-        jobTitleStep.realizarLogin("Admin","admin123");
-    }
     @When("el usuario da click al modulo de Admin")
     public void seleccionaAdmin(){
         jobTitleStep.seleccionaAdmin();

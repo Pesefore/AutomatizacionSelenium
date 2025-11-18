@@ -3,7 +3,7 @@ package step.jobTitleStep;
 import hooks.Hooks;
 import org.openqa.selenium.WebDriver;
 import pages.jobTitle.JobTitlePage;
-import step.loginStep.LoginStep;
+import step.loginSharedStep.LoginStep;
 
 public class JobTitleStep {
 
@@ -15,13 +15,6 @@ public class JobTitleStep {
         this.Driver = Hooks.getDriver();
         this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
         this.jobTitlePage = new JobTitlePage(Driver);
-    }
-
-    public void realizarLogin(String username, String password){
-        loginStep.abrirPagina();
-        loginStep.ingresaUsername(username);
-        loginStep.ingresaPassword(password);
-        loginStep.clickButton();
     }
 
     public void seleccionaAdmin(){

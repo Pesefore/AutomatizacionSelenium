@@ -99,6 +99,10 @@ public class JobTitlePage {
     }
     // -----------------------------------------------------------------------------------------------------------------
     //Localizador dinámico (devuelve WebElement listo para usar)
+    /*Este localizador se almacenará en la variable "xpath", en el que reconocerá que será del tipo String; por lo que, una vez
+    que se localiza según la condición de que sea cickleable va a retornarse en una variable "title" del tipo String. Luego, se le
+    mandará una acción en el método "public void buttonDelete".
+     */
     public WebElement getDeleteButton(String title){
         String xpath = "//div[contains(@class,'oxd-table-row')]" + "[.//div[normalize-space()='" + title + "']]" + "//i[contains(@class,'bi-trash')]/ancestor::button";
         return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
