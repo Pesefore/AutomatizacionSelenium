@@ -20,8 +20,8 @@
         <cucumber.version>7.14.0</cucumber.version>
     </properties>
 
-    <dependencies>
 
+    <dependencies>
         <!-- GESTOR DE DRIVERS -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

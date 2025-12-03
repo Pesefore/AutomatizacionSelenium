@@ -8,12 +8,12 @@ import step.loginSharedStep.LoginStep;
 public class ModuloPimStep {
 
     private WebDriver driver;
-    private LoginStep loginStep;
+    //private LoginStep loginStep;
     private ModuloPimPage moduloPimPage;
 
     public ModuloPimStep(){
         this.driver = Hooks.getDriver();
-        this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
+        //this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
         this.moduloPimPage = new ModuloPimPage(driver);
 
     }

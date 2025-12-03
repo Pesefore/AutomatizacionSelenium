@@ -6,9 +6,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/feature/login",
+        features = "src/test/java/feature/demoqa",
         glue = {"stepDefinitions", "hooks"},
-        tags = "@CreateEmployee",
+        tags = "@RegistroExitosoEstudiante",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
         monochrome = true
 )
