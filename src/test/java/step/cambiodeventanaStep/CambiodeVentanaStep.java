@@ -4,13 +4,14 @@ import hooks.Hooks;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import pages.cambiodeventana.CambiodeVentanaPage;
+import webdrivermanager.WebDriverManager;
 
 public class CambiodeVentanaStep {
     private CambiodeVentanaPage cambiodeVentanaPage;
     private WebDriver driver;
 
     public CambiodeVentanaStep(){
-        this.driver = Hooks.getDriver();
+        this.driver = WebDriverManager.getDriver();
         this.cambiodeVentanaPage = new CambiodeVentanaPage(driver);
     }
     public void clickAlertsFrame(){

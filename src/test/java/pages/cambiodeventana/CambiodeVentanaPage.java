@@ -15,7 +15,6 @@ import step.cambiodeventanaStep.CambiodeVentanaStep;
 import java.time.Duration;
 import java.util.Set;
 
-import static com.oracle.truffle.js.builtins.AtomicsBuiltins.Atomics.wait;
 
 public class CambiodeVentanaPage {
 

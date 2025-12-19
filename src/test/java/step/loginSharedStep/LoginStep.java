@@ -2,6 +2,7 @@ package step.loginSharedStep;
 import org.openqa.selenium.WebDriver;
 import hooks.Hooks;
 import pages.login.LoginPage;
+import webdrivermanager.WebDriverManager;
 
 
 public class LoginStep {
@@ -9,7 +10,7 @@ public class LoginStep {
     private LoginPage loginPage;
 
     public LoginStep(){
-        this.driver = Hooks.getDriver();
+        this.driver = WebDriverManager.getDriver();
         this.loginPage = new LoginPage(driver);
     }
 

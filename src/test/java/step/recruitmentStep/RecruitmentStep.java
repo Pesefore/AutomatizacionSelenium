@@ -4,6 +4,7 @@ import hooks.Hooks;
 import org.openqa.selenium.WebDriver;
 import pages.moduloPIM.ModuloPimPage;
 import pages.recruitment.RecruitmentPage;
+import webdrivermanager.WebDriverManager;
 
 public class RecruitmentStep {
 
@@ -11,7 +12,7 @@ public class RecruitmentStep {
     private RecruitmentPage recruitmentPage;
 
     public RecruitmentStep(){
-        this.driver = Hooks.getDriver();
+        this.driver = WebDriverManager.getDriver();
         this.recruitmentPage = new RecruitmentPage(driver);
     }
 

@@ -80,7 +80,7 @@ public class RecruitmentPage {
     public void dropdownVacancy(){
         dropdownVacancy.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement deploymentElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[normalize-space()='Senior QA Lead']")));
+        WebElement deploymentElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='listbox' and normalize-space()='Software Engineer']")));
         deploymentElement.click();
     }
     public void ingresaEmailRecruitment(String email){

@@ -4,6 +4,7 @@ import hooks.Hooks;
 import org.openqa.selenium.WebDriver;
 import pages.moduloPIM.ModuloPimPage;
 import step.loginSharedStep.LoginStep;
+import webdrivermanager.WebDriverManager;
 
 public class ModuloPimStep {
 
@@ -12,7 +13,7 @@ public class ModuloPimStep {
     private ModuloPimPage moduloPimPage;
 
     public ModuloPimStep(){
-        this.driver = Hooks.getDriver();
+        this.driver = WebDriverManager.getDriver();
         //this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
         this.moduloPimPage = new ModuloPimPage(driver);
 

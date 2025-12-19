@@ -4,6 +4,7 @@ import hooks.Hooks;
 import org.openqa.selenium.WebDriver;
 import pages.jobTitle.JobTitlePage;
 import step.loginSharedStep.LoginStep;
+import webdrivermanager.WebDriverManager;
 
 public class JobTitleStep {
 
@@ -12,7 +13,7 @@ public class JobTitleStep {
     private JobTitlePage jobTitlePage;
 
     public JobTitleStep(){
-        this.Driver = Hooks.getDriver();
+        this.Driver = WebDriverManager.getDriver();
         this.loginStep = new LoginStep(); //Estás creando un objeto de otra clase para usar sus métodos dentro de tu clase
         this.jobTitlePage = new JobTitlePage(Driver);
     }

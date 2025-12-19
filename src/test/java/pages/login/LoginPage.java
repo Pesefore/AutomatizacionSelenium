@@ -43,6 +43,7 @@ public class LoginPage {
     }
     public void ingresoExitoso(){
         wait.until(ExpectedConditions.visibilityOf(textDashboard));
+        assert textDashboard.isDisplayed(): "No se ingresó exitosamente; por ende, no se vio la imagen esperada.";
     }
 
 }

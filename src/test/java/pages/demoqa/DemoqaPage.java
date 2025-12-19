@@ -1,6 +1,6 @@
 package pages.demoqa;
 
-import org.junit.platform.commons.function.Try;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -64,7 +64,7 @@ public class DemoqaPage {
         buttonForm.click();
     /*Acá estamos utilizando WebElement para poder ubicar un elemento de la página web, pero también podríamos ubicarlos por
       FindBy y la diferencia radica que esta última manera de ubicar elementos de la página web no es eficiente, o no debe usarse
-        para elementos dinámicos del DOM; por otro lado, el WebElement sí es eficiente en ese tipo de casos*/
+      para elementos dinámicos del DOM; por otro lado, el WebElement sí es eficiente en ese tipo de casos*/
     }
     public void clickPracticeForms(){
         wait.until(ExpectedConditions.visibilityOf(buttonPracticeForm));

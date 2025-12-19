@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.demoqa.DemoqaPage;
 import pages.login.LoginPage;
+import webdrivermanager.WebDriverManager;
 
 public class DemoqaStep {
 
@@ -12,7 +13,7 @@ public class DemoqaStep {
     private WebDriver driver;
 
     public DemoqaStep(){
-        this.driver = Hooks.getDriver();
+        this.driver = WebDriverManager.getDriver();
         this.demoqaPage = new DemoqaPage(driver);
     }
 

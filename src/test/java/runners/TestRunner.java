@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/feature/cambiodeventana",
+        features = "src/test/java/feature",
         glue = {"stepDefinitions", "hooks"},
         tags = "@CambiodeTabExitoso",
         plugin = {"pretty", "html:target/cucumber-reports.html"},
